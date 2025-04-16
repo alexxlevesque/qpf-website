@@ -53,7 +53,7 @@ export default function Home() {
           <div className="max-w-2xl fade-right">
             <h2 className="heading-lg mb-8">Our Vision</h2>
             <p className="text-body mb-8">
-              To provide practical and essential financial education to every Queen's student.
+              To provide practical and essential financial education to every Queen&apos;s student.
             </p>
             <div className="mt-8">
               <Link href="/membership" className="btn-primary">
