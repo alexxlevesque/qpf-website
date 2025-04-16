@@ -1,11 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { useSwipeable } from 'react-swipeable'
 
 const quotes = [
   {
-    text: "We&apos;re passionate about making financial education accessible to every student at Queen&apos;s.",
+    text: "We're passionate about making financial education accessible to every student at Queen's.",
     author: "Ezekiel Madruga",
     title: "Executive Director"
   },
@@ -20,7 +19,7 @@ const quotes = [
     title: "Sponsorships Director"
   },
   {
-    text: "We believe in teaching finance in a way that&apos;s relatable and easy to understand.",
+    text: "We believe in teaching finance in a way that's relatable and easy to understand.",
     author: "Arman Gulamhussein",
     title: "Culture Director"
   }
@@ -37,33 +36,24 @@ const QuoteCarousel = () => {
     setCurrentQuote((prev) => (prev - 1 + quotes.length) % quotes.length)
   }
 
-  const handlers = useSwipeable({
-    onSwipedLeft: nextQuote,
-    onSwipedRight: prevQuote,
-    swipeDuration: 500,
-    preventScrollOnSwipe: true,
-    trackMouse: true
-  })
-
   return (
-    <section className="py-20 bg-qpf-gold/5">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative" {...handlers}>
+    <div className="relative py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative">
           <div className="text-center">
-            <p className="text-2xl md:text-3xl font-serif text-white mb-8 italic select-none">
+            <p className="text-2xl md:text-3xl font-serif text-white mb-8 italic">
               &ldquo;{quotes[currentQuote].text}&rdquo;
             </p>
             <div className="text-white">
-              <p className="font-serif text-lg select-none">{quotes[currentQuote].author}</p>
-              <p className="text-sm opacity-80 select-none">{quotes[currentQuote].title}</p>
+              <p className="text-lg font-medium">{quotes[currentQuote].author}</p>
+              <p className="text-white/60">{quotes[currentQuote].title}</p>
             </div>
           </div>
 
-          {/* Navigation Controls */}
-          <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between pointer-events-none">
+          <div className="absolute top-1/2 -translate-y-1/2 left-0 flex justify-between w-full">
             <button
               onClick={prevQuote}
-              className="pointer-events-auto p-2 text-white/50 hover:text-white transition-colors duration-200"
+              className="bg-white/20 backdrop-blur-sm text-white hover:text-qpf-gold hover:bg-white/30 p-2 rounded-full shadow-md transition-all duration-200"
               aria-label="Previous quote"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +62,7 @@ const QuoteCarousel = () => {
             </button>
             <button
               onClick={nextQuote}
-              className="pointer-events-auto p-2 text-white/50 hover:text-white transition-colors duration-200"
+              className="bg-white/20 backdrop-blur-sm text-white hover:text-qpf-gold hover:bg-white/30 p-2 rounded-full shadow-md transition-all duration-200"
               aria-label="Next quote"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +71,6 @@ const QuoteCarousel = () => {
             </button>
           </div>
 
-          {/* Navigation Dots */}
           <div className="flex justify-center space-x-2 mt-8">
             {quotes.map((_, index) => (
               <button
@@ -96,7 +85,7 @@ const QuoteCarousel = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
