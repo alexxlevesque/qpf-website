@@ -129,7 +129,7 @@ export default function Team() {
                             src={member.image}
                             alt={member.name}
                             fill
-                            className="object-cover filter brightness-90 contrast-75 saturate-50 sepia hue-rotate-[340deg]"
+                            className="object-cover"
                           />
                         </div>
                         <div className="p-6">
