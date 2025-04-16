@@ -21,7 +21,7 @@ export default function About() {
               src="/images/ourstory-bg.jpg"
               alt="Our Story Background"
               fill
-              className="object-cover filter brightness-90 contrast-75 saturate-50 sepia hue-rotate-[340deg]"
+              className="object-cover filter brightness-90 contrast-30 saturate-50 sepia hue-rotate-[340deg]"
             />
             <div className="absolute inset-0 bg-gradient-to-br from-qpf-dark/90 to-qpf-gold/40 mix-blend-multiply" />
           </div>
@@ -63,11 +63,11 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-serif text-qpf-dark mb-4">Accessibility</h3>
                 <p className="text-qpf-dark/80">
-                  Open to all students, regardless of program or year — no prior financial knowledge required. We believe financial education should be accessible to everyone at Queen's.
+                  We believe financial education should be available to everyone. That&apos;s why our resources are designed to be accessible and understandable, regardless of your background or experience level.
                 </p>
               </div>
 
-              {/* Long-Term Benefits */}
+              {/* Long-term Impact */}
               <div className="bg-white p-8 rounded-lg shadow-sm fade-up delay-400">
                 <div className="text-qpf-gold mb-6">
                   <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20">
@@ -75,9 +75,9 @@ export default function About() {
                     <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-serif text-qpf-dark mb-4">Long-Term Benefits</h3>
+                <h3 className="text-2xl font-serif text-qpf-dark mb-4">Long-term Impact</h3>
                 <p className="text-qpf-dark/80">
-                  Helping students build habits that last well beyond their time at Queen's. Our goal is to provide you with the foundation for lifelong financial success.
+                  Our goal isn&apos;t just to teach; it&apos;s to create lasting change. We focus on building sustainable financial habits that will benefit you throughout your career and life.
                 </p>
               </div>
             </div>

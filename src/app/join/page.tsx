@@ -50,7 +50,7 @@ export default function JoinUs() {
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-serif text-white mb-6 fade-up">Join Our Team</h1>
               <p className="text-xl text-white/90 max-w-3xl mx-auto fade-up delay-200">
-                Be part of a dynamic team dedicated to making financial education accessible to every Queen's student.
+                Be part of a dynamic team dedicated to making financial education accessible to every Queen&apos;s student.
               </p>
             </div>
 
