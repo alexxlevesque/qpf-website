@@ -33,7 +33,7 @@ export default function Home() {
           <div className="max-w-4xl">
             <h2 className="text-2xl font-medium mb-6 fade-up">WE ARE</h2>
             <h1 className="heading-xl mb-8 fade-up delay-200">
-              Queen's Premier Financial Education Initiative
+              Queen&apos;s Premier Financial Education Initiative
             </h1>
             <p className="text-xl md:text-2xl mb-12 max-w-3xl fade-up delay-400">
               A student-run education initiative centred around teaching people how to manage their money, their way.
@@ -53,7 +53,7 @@ export default function Home() {
           <div className="max-w-2xl fade-right">
             <h2 className="heading-lg mb-8">Our Vision</h2>
             <p className="text-body mb-8">
-              To provide practical and essential financial education to every Queen's student.
+              To provide practical and essential financial education to every Queen&apos;s student.
             </p>
             <div className="mt-8">
               <Link href="/membership" className="btn-primary">
