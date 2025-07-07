@@ -182,7 +182,7 @@ export default function Team() {
               Want to Join Our Team?
             </h2>
             <p className="text-lg text-qpf-dark/80 mb-8 fade-up delay-200">
-              We're always looking for passionate students to help us grow and make a difference in financial education.
+              We&apos;re always looking for passionate students to help us grow and make a difference in financial education.
             </p>
             <div className="fade-up delay-400">
               <a
