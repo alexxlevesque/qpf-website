@@ -145,7 +145,7 @@ export default function Team() {
                   <div className={`grid gap-6 ${
                     groupedMembers[group].length === 1 ? 'grid-cols-1 max-w-sm mx-auto' :
                     groupedMembers[group].length === 2 ? 'grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto' :
-                    groupedMembers[group].length === 3 ? 'grid-cols-1 md:grid-cols-3' :
+                    groupedMembers[group].length === 3 ? 'grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto' :
                     'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
                   }`}>
                     {groupedMembers[group].map((member, index) => (
