@@ -96,7 +96,7 @@ export default function Membership() {
                   >
                     <option>Arts and Science</option>
                     <option>Engineering</option>
-                    <option>Commerce</option>
+                    <option selected>Commerce</option>
                     <option>Computing</option>
                     <option>Health Sciences</option>
                     <option>Other</option>
