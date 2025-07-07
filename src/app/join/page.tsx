@@ -10,7 +10,7 @@ export default function JoinUs() {
 
   const roles = [
     {
-      title: 'Educators',
+      title: 'Mentors',
       description: 'Join our team of passionate educators who help deliver financial literacy workshops and create educational content.',
       responsibilities: [
         'Develop and deliver engaging financial workshops',

@@ -111,18 +111,47 @@ export default function Team() {
           </div>
         </section>
 
+        {/* Team Overview Section */}
+        <section className="py-16 bg-qpf-gold/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="fade-up">
+                <div className="text-3xl font-serif text-qpf-gold mb-2">{teamMembers.length}</div>
+                <div className="text-qpf-dark/80">Team Members</div>
+              </div>
+              <div className="fade-up delay-200">
+                <div className="text-3xl font-serif text-qpf-gold mb-2">{groupOrder.length}</div>
+                <div className="text-qpf-dark/80">Departments</div>
+              </div>
+              <div className="fade-up delay-400">
+                <div className="text-3xl font-serif text-qpf-gold mb-2">100%</div>
+                <div className="text-qpf-dark/80">Student-Led</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Team Grid Section */}
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {groupOrder.map((group, groupIndex) => (
               groupedMembers[group] && (
-                <div key={group} className="mb-16">
-                  <h2 className="text-2xl font-serif text-qpf-dark mb-8 fade-up">{group}</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div key={group} className="mb-20">
+                  <div className="text-center mb-12">
+                    <h2 className="text-3xl font-serif text-qpf-dark mb-4 fade-up">{group}</h2>
+                    <div className="w-24 h-1 bg-qpf-gold mx-auto fade-up delay-200"></div>
+                  </div>
+                  
+                  <div className={`grid gap-8 ${
+                    groupedMembers[group].length === 1 ? 'grid-cols-1 max-w-md mx-auto' :
+                    groupedMembers[group].length === 2 ? 'grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto' :
+                    groupedMembers[group].length === 3 ? 'grid-cols-1 md:grid-cols-3' :
+                    'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+                  }`}>
                     {groupedMembers[group].map((member, index) => (
                       <div
                         key={member.name}
-                        className={`bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 fade-up delay-${Math.min(index * 200, 600)}`}
+                        className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 fade-up delay-${Math.min(index * 200, 600)}`}
                       >
                         <div className="aspect-w-1 aspect-h-1 relative">
                           <Image
@@ -131,10 +160,11 @@ export default function Team() {
                             fill
                             className="object-cover"
                           />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                         </div>
-                        <div className="p-6">
-                          <h3 className="text-xl font-serif text-qpf-dark">{member.name}</h3>
-                          <p className="text-qpf-dark/80">{member.title}</p>
+                        <div className="p-6 text-center">
+                          <h3 className="text-xl font-serif text-qpf-dark mb-2">{member.name}</h3>
+                          <p className="text-qpf-gold font-medium">{member.title}</p>
                         </div>
                       </div>
                     ))}
@@ -142,6 +172,26 @@ export default function Team() {
                 </div>
               )
             ))}
+          </div>
+        </section>
+
+        {/* Join Our Team Section */}
+        <section className="py-20 bg-qpf-gold/5">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-serif text-qpf-dark mb-8 fade-up">
+              Want to Join Our Team?
+            </h2>
+            <p className="text-lg text-qpf-dark/80 mb-8 fade-up delay-200">
+              We're always looking for passionate students to help us grow and make a difference in financial education.
+            </p>
+            <div className="fade-up delay-400">
+              <a
+                href="/membership"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-lg font-medium rounded-md text-white bg-qpf-gold hover:bg-qpf-gold/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-qpf-gold transition-colors duration-200"
+              >
+                Get Involved
+              </a>
+            </div>
           </div>
         </section>
       </main>

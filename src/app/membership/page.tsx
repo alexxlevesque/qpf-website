@@ -123,7 +123,7 @@ export default function Membership() {
                 Our Commitment to Inclusivity
               </h2>
               <p className="text-lg text-qpf-dark/80 mb-8">
-                We are committed to empowering students across all years, faculties, and levels of experience.
+                QPF is open to all students across all years, regardless of faculty.
               </p>
             </div>
           </div>
