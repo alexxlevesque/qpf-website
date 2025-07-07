@@ -38,7 +38,7 @@ export default function About() {
       description: "Open to all students, regardless of program or experience level.",
       details: [
         "No prior financial knowledge required",
-        "Free membership for all Queen&apos;s students",
+        "Free membership for all Queen's students",
         "Multiple workshop levels from beginner to advanced",
         "One-on-one mentorship opportunities",
         "Accessible online resources and materials"
