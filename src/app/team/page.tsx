@@ -10,55 +10,55 @@ const teamMembers = [
     name: 'Ezekiel Madruga',
     title: 'Executive Director',
     group: 'Executive Directors',
-    image: '/team/ezekiel-madruga.jpg'
+    image: '/team/ezekiel.png'
   },
   {
     name: 'Cyrus Horner',
     title: 'Executive Director',
     group: 'Executive Directors',
-    image: '/team/cyrus-horner.jpg'
+    image: '/team/cyrus.png'
   },
   {
     name: 'Luke Wilson',
     title: 'Director',
     group: 'Sponsorships',
-    image: '/team/luke-wilson.jpg'
+    image: '/team/luke.png'
   },
   {
     name: 'Arman Gulamhussein',
     title: 'Director',
     group: 'Culture',
-    image: '/team/arman-gulamhussein.jpg'
+    image: '/team/arman.png'
   },
   {
     name: 'Henry Carter',
     title: 'Director',
     group: 'Logistics',
-    image: '/team/henry-carter.jpg'
+    image: '/team/henry.png'
   },
   {
     name: 'Talia Charach',
     title: 'Director',
     group: 'Marketing',
-    image: '/team/talia-charach.jpg'
+    image: '/team/talia.png'
   },
   {
     name: 'Victoria Orlando',
     title: 'Director',
     group: 'Student Engagement',
-    image: '/team/victoria-orlando.jpg'
+    image: '/team/victoria.png'
   },
   {
     name: 'Alessandro Napoli',
     title: 'Director',
     group: 'Brand',
-    image: '/team/alessandro-napoli.jpg'
+    image: '/team/alessandro.png'
   },
   {
     name: 'Alex Levesque',
     title: 'Director',
     group: 'Web Development',
-    image: '/team/alex-levesque.jpg'
+    image: '/team/alex.png'
   }
 ]
 
