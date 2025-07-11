@@ -21,56 +21,57 @@ const teamMembers = [
   {
     name: 'Luke Wilson',
     title: 'Director',
-    group: 'Sponsorships',
+    specialty: 'Sponsorships',
+    group: 'Directors',
     image: '/team/luke.png'
   },
   {
     name: 'Arman Gulamhussein',
     title: 'Director',
-    group: 'Culture',
+    specialty: 'Culture',
+    group: 'Directors',
     image: '/team/arman.png'
   },
   {
     name: 'Henry Carter',
     title: 'Director',
-    group: 'Logistics',
+    specialty: 'Logistics',
+    group: 'Directors',
     image: '/team/henry.png'
   },
   {
     name: 'Talia Charach',
     title: 'Director',
-    group: 'Marketing',
+    specialty: 'Marketing',
+    group: 'Directors',
     image: '/team/talia.png'
   },
   {
     name: 'Victoria Orlando',
     title: 'Director',
-    group: 'Student Engagement',
+    specialty: 'Student Engagement',
+    group: 'Directors',
     image: '/team/victoria.png'
   },
   {
     name: 'Alessandro Napoli',
     title: 'Director',
-    group: 'Brand',
+    specialty: 'Brand',
+    group: 'Directors',
     image: '/team/alessandro.png'
   },
   {
     name: 'Alex Levesque',
     title: 'Director',
-    group: 'Web Development',
+    specialty: 'Web Development',
+    group: 'Directors',
     image: '/team/alex.png'
   }
 ]
 
 const groupOrder = [
   'Executive Directors',
-  'Sponsorships',
-  'Culture',
-  'Logistics',
-  'Marketing',
-  'Student Engagement',
-  'Brand',
-  'Web Development'
+  'Directors'
 ]
 
 export default function Team() {
@@ -145,8 +146,7 @@ export default function Team() {
                   <div className={`grid gap-6 ${
                     groupedMembers[group].length === 1 ? 'grid-cols-1 max-w-sm mx-auto' :
                     groupedMembers[group].length === 2 ? 'grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto' :
-                    groupedMembers[group].length === 3 ? 'grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto' :
-                    'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'
+                    'grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto'
                   }`}>
                     {groupedMembers[group].map((member, index) => (
                       <div
@@ -165,6 +165,9 @@ export default function Team() {
                         <div className="p-4 text-center">
                           <h3 className="text-lg font-serif text-qpf-dark mb-1">{member.name}</h3>
                           <p className="text-qpf-gold font-medium text-sm">{member.title}</p>
+                          {member.specialty && (
+                            <p className="text-qpf-dark/70 text-xs mt-1">{member.specialty}</p>
+                          )}
                         </div>
                       </div>
                     ))}
