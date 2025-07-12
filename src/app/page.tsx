@@ -113,12 +113,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section - Full width background image */}
+      {/* Why Choose QPF Section - Full width background image */}
       <section className="relative py-24">
         <div className="absolute inset-0">
           <Image
             src="/images/stats-bg.jpg"
-            alt="Statistics Background"
+            alt="Why Choose QPF Background"
             fill
             className="object-cover filter brightness-90 contrast-75 saturate-50 sepia hue-rotate-[340deg]"
           />
@@ -126,18 +126,40 @@ export default function Home() {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white text-center">
-            <div className="fade-up">
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-lg">Students Reached</div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif text-white mb-4 fade-up">Why Choose QPF?</h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto fade-up delay-200">
+              Join a community dedicated to your financial success
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+            <div className="text-center fade-up">
+              <div className="text-qpf-gold mb-4">
+                <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-serif mb-3">Expert-Led Learning</h3>
+              <p className="text-white/80">Learn from experienced students and industry professionals who understand your financial journey.</p>
             </div>
-            <div className="fade-up delay-200">
-              <div className="text-4xl font-bold mb-2">20+</div>
-              <div className="text-lg">Workshops Delivered</div>
+            <div className="text-center fade-up delay-200">
+              <div className="text-qpf-gold mb-4">
+                <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-serif mb-3">Community Support</h3>
+              <p className="text-white/80">Connect with like-minded peers and build a network of financially savvy individuals.</p>
             </div>
-            <div className="fade-up delay-400">
-              <div className="text-4xl font-bold mb-2">100%</div>
-              <div className="text-lg">Student Satisfaction</div>
+            <div className="text-center fade-up delay-400">
+              <div className="text-qpf-gold mb-4">
+                <svg className="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-serif mb-3">Practical Skills</h3>
+              <p className="text-white/80">Gain real-world financial skills that you can apply immediately and throughout your life.</p>
             </div>
           </div>
         </div>
