@@ -51,7 +51,7 @@ export default function Membership() {
                   Membership registration coming soon!
                 </p>
                 <p className="text-sm text-qpf-dark/60">
-                  We're working hard to bring you an amazing membership experience. Stay tuned for updates!
+                  We&apos;re working hard to bring you an amazing membership experience. Stay tuned for updates!
                 </p>
               </div>
             </div>
