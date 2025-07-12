@@ -72,11 +72,8 @@ export default function JoinUs() {
             </div>
 
             <div className="mt-12 text-center fade-up delay-600">
-              <a
-                href="mailto:personalfinance@clubs.queensu.ca"
-                className="inline-flex items-center px-8 py-4 bg-white text-qpf-gold hover:bg-qpf-gold hover:text-white transition-colors duration-200 rounded-md text-lg font-medium"
-              >
-                Apply Now
+              <div className="inline-flex items-center px-8 py-4 bg-gray-300 text-gray-600 rounded-md text-lg font-medium cursor-not-allowed">
+                Applications coming soon
                 <svg
                   className="ml-2 w-5 h-5"
                   fill="none"
@@ -87,10 +84,10 @@ export default function JoinUs() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-              </a>
+              </div>
             </div>
           </div>
         </section>
