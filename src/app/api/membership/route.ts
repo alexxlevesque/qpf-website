@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Path to the Excel file
-    const excelFilePath = path.join(process.cwd(), 'data', 'membership-applications.xlsx')
+    const excelFilePath = '/Users/alexlevesque/Library/CloudStorage/OneDrive-Queen\'sUniversity/!Queen\'s Engineering/Miscellaneous/membership-applications.xlsx'
     
     // Ensure the data directory exists
     const dataDir = path.dirname(excelFilePath)
