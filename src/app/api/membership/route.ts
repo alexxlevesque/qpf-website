@@ -16,6 +16,15 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Validate Queen's email format
+    const queensEmailRegex = /^[a-zA-Z0-9._%+-]+@queensu\.ca$/
+    if (!queensEmailRegex.test(email)) {
+      return NextResponse.json(
+        { error: 'Please use your Queen\'s email address (@queensu.ca)' },
+        { status: 400 }
+      )
+    }
+
     // Add timestamp
     const submissionData = {
       name,

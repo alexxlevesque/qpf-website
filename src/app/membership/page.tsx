@@ -12,8 +12,8 @@ export default function Membership() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    year: '',
-    faculty: ''
+    year: 'First Year',
+    faculty: 'Commerce'
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -31,6 +31,15 @@ export default function Membership() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
+
+    // Validate Queen's email format
+    const queensEmailRegex = /^[a-zA-Z0-9._%+-]+@queensu\.ca$/
+    if (!queensEmailRegex.test(formData.email)) {
+      setSubmitStatus('error')
+      setSubmitMessage('Please use your Queen\'s email address (@queensu.ca)')
+      setIsSubmitting(false)
+      return
+    }
 
     try {
       const response = await fetch('/api/membership', {
@@ -127,6 +136,7 @@ export default function Membership() {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
+                    placeholder="your.name@queensu.ca"
                     required
                     className="block w-full rounded-md border-gray-300 shadow-sm focus:border-qpf-gold focus:ring-qpf-gold"
                   />
