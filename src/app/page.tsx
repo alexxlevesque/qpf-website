@@ -146,9 +146,9 @@ export default function Home() {
           <h3 className="text-2xl md:text-3xl font-serif text-qpf-dark mb-6 fade-up">
             Learn More About Us
           </h3>
-          <p className="text-qpf-dark/80 text-lg mb-8 max-w-2xl mx-auto fade-up delay-200">
-            Discover our story, mission, and the team behind Queen's Premier Financial Education Initiative.
-          </p>
+                      <p className="text-qpf-dark/80 text-lg mb-8 max-w-2xl mx-auto fade-up delay-200">
+              Discover our story, mission, and the team behind Queen&apos;s Premier Financial Education Initiative.
+            </p>
           <div className="fade-up delay-400">
             <Link href="/about" className="btn-primary">
               About QPF

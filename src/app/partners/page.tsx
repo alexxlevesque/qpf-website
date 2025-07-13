@@ -83,7 +83,7 @@ export default function Partners() {
               Our Partners
             </h1>
             <p className="text-xl md:text-2xl mb-12 max-w-3xl fade-up delay-200">
-              We're proud to collaborate with industry leaders and educational institutions to provide exceptional financial education opportunities.
+              We&apos;re proud to collaborate with industry leaders and educational institutions to provide exceptional financial education opportunities.
             </p>
           </div>
         </div>
@@ -178,7 +178,7 @@ export default function Partners() {
                 </svg>
               </div>
               <h3 className="text-xl font-serif mb-4 text-qpf-dark">Brand Visibility</h3>
-              <p className="text-qpf-dark/80 leading-relaxed">Increase your brand presence among Queen's students and demonstrate your commitment to financial education.</p>
+              <p className="text-qpf-dark/80 leading-relaxed">Increase your brand presence among Queen&apos;s students and demonstrate your commitment to financial education.</p>
             </div>
             
             <div className="group text-center fade-up delay-400 p-8 rounded-2xl hover:bg-gray-50 transition-all duration-500">
@@ -199,7 +199,7 @@ export default function Partners() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="heading-lg mb-6 fade-up">Interested in Partnering?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto fade-up delay-200">
-            We're always looking for new partners who share our vision of financial education for all students.
+            We&apos;re always looking for new partners who share our vision of financial education for all students.
           </p>
           <div className="fade-up delay-400">
             <a href="/contact" className="btn-white">
