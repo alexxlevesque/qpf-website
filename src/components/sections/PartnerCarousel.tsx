@@ -7,9 +7,6 @@ import Link from 'next/link'
 // Dummy partner data for the carousel
 const partners = [
   { id: 1, name: 'Partner 1', initials: 'P1' },
-  { id: 2, name: 'Partner 2', initials: 'P2' },
-  { id: 3, name: 'Partner 3', initials: 'P3' },
-  { id: 4, name: 'Partner 4', initials: 'P4' },
 ]
 
 const PartnerCarousel = () => {
@@ -53,12 +50,12 @@ const PartnerCarousel = () => {
           </p>
         </div>
 
-        <div className="flex justify-center items-center space-x-8 md:space-x-16 lg:space-x-20">
+        <div className="flex justify-center items-center">
           {partners.map((partner, index) => (
             <Link
               key={partner.id}
               href={`/partners#partner-${partner.id}`}
-              className={`group relative flex items-center justify-center w-32 md:w-40 h-16 md:h-20 transition-all duration-700 ease-out hover:scale-110 fade-up cursor-pointer`}
+              className={`group relative flex items-center justify-center w-40 md:w-48 h-20 md:h-24 transition-all duration-700 ease-out hover:scale-110 fade-up cursor-pointer`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               {/* Glowing background effect */}
@@ -66,7 +63,7 @@ const PartnerCarousel = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-qpf-gold/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               
               {/* Partner initials */}
-              <span className="relative z-10 text-white font-bold text-lg md:text-xl group-hover:text-qpf-gold transition-all duration-500 group-hover:scale-110">
+              <span className="relative z-10 text-white font-bold text-xl md:text-2xl group-hover:text-qpf-gold transition-all duration-500 group-hover:scale-110">
                 {partner.initials}
               </span>
               

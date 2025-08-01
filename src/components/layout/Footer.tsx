@@ -34,7 +34,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="mailto:personalfinance@clubs.queensu.ca"
+                href="mailto:e.madruga@queensu.ca"
                 className="text-white/60 hover:text-qpf-gold transition-colors duration-200"
               >
                 <span className="sr-only">Email</span>

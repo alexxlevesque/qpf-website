@@ -2,187 +2,83 @@
 
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
-import { useState } from 'react'
+import InstagramFeed from '@/components/sections/InstagramFeed'
+import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [submitMessage, setSubmitMessage] = useState('')
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      const result = await response.json()
-
-      if (response.ok) {
-        setSubmitStatus('success')
-        setSubmitMessage(result.message)
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        })
-      } else {
-        setSubmitStatus('error')
-        setSubmitMessage(result.error || 'Something went wrong. Please try again.')
-      }
-    } catch (error) {
-      setSubmitStatus('error')
-      setSubmitMessage('Network error. Please check your connection and try again.')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+  useScrollAnimation()
 
   return (
     <>
       <Navigation />
       <main className="min-h-screen bg-white pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <h1 className="text-4xl md:text-5xl font-serif text-qpf-dark text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-serif text-qpf-dark text-center mb-16 fade-up">
             Get in Touch
           </h1>
 
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white rounded-lg shadow-sm p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-qpf-dark">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="mt-1 block w-full rounded-md border-qpf-gold/20 shadow-sm focus:border-qpf-gold focus:ring-qpf-gold"
-                    required
-                  />
+          <div className="max-w-3xl mx-auto text-center">
+                         <div className="bg-white rounded-2xl shadow-lg p-12 mb-8 fade-up delay-200">
+              <div className="mb-8">
+                <div className="w-16 h-16 bg-qpf-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-8 h-8 text-qpf-gold" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
                 </div>
+                <h2 className="text-2xl font-serif text-qpf-dark mb-4">Ready to Connect?</h2>
+                <p className="text-qpf-dark/80 text-lg leading-relaxed">
+                  Have questions about QPF or want to learn more about our financial education programs? 
+                  We&apos;d love to hear from you!
+                </p>
+              </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-qpf-dark">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="mt-1 block w-full rounded-md border-qpf-gold/20 shadow-sm focus:border-qpf-gold focus:ring-qpf-gold"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-qpf-dark">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="mt-1 block w-full rounded-md border-qpf-gold/20 shadow-sm focus:border-qpf-gold focus:ring-qpf-gold"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-qpf-dark">
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className="mt-1 block w-full rounded-md border-qpf-gold/20 shadow-sm focus:border-qpf-gold focus:ring-qpf-gold"
-                    required
-                  />
-                </div>
-
-                {/* Status Message */}
-                {submitStatus !== 'idle' && (
-                  <div className={`p-4 rounded-md ${
-                    submitStatus === 'success' 
-                      ? 'bg-green-50 border border-green-200 text-green-800' 
-                      : 'bg-red-50 border border-red-200 text-red-800'
-                  }`}>
-                    {submitMessage}
-                  </div>
-                )}
-
-                <div>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium transition-colors duration-200 ${
-                      isSubmitting
-                        ? 'bg-gray-400 cursor-not-allowed'
-                        : 'text-white bg-qpf-gold hover:bg-qpf-gold/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-qpf-gold'
-                    }`}
+              <div className="space-y-6">
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h3 className="text-lg font-medium text-qpf-dark mb-2">Email Us</h3>
+                  <p className="text-qpf-dark/70 mb-4">
+                    Send us an email and we&apos;ll get back to you as soon as possible.
+                  </p>
+                  <a
+                    href="mailto:e.madruga@queensu.ca"
+                    className="inline-flex items-center px-6 py-3 bg-qpf-gold text-white rounded-lg hover:bg-qpf-gold/90 transition-colors duration-200 font-medium"
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    e.madruga@queensu.ca
+                  </a>
                 </div>
-              </form>
-            </div>
 
-            <div className="mt-12 text-center">
-              <p className="text-lg text-qpf-dark/80">
-                You can also reach us at{' '}
-                <a
-                  href="mailto:e.madruga@queensu.ca"
-                  className="text-qpf-gold hover:text-qpf-gold/80"
-                >
-                  e.madruga@queensu.ca
-                </a>
-              </p>
-              <div className="mt-4">
-                <a
-                  href="https://www.instagram.com/queens.personalfinance/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-qpf-gold hover:text-qpf-gold/80"
-                >
-                  Follow us on Instagram
-                </a>
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <h3 className="text-lg font-medium text-qpf-dark mb-2">Follow Us</h3>
+                  <p className="text-qpf-dark/70 mb-4">
+                    Stay updated with our latest events, tips, and financial education content.
+                  </p>
+                  <a
+                    href="https://www.instagram.com/queens.personalfinance/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 font-medium"
+                  >
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z" />
+                    </svg>
+                    Follow on Instagram
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </main>
+
+      {/* Instagram Feed Section */}
+      <div className="fade-up">
+        <InstagramFeed />
+      </div>
+
       <Footer />
     </>
   )

@@ -15,30 +15,6 @@ const partners = [
     description: 'Partner 1 has been a cornerstone partner of QPF since our inception, providing financial expertise, mentorship opportunities, and real-world insights to our members.',
     partnership: 'Partner 1 supports our mission through guest speaker series, internship opportunities, and financial literacy workshops.',
     category: 'Financial Services'
-  },
-  {
-    id: 2,
-    name: 'Partner 2',
-    initials: 'P2',
-    description: 'Partner 2 brings decades of industry experience to help QPF members understand personal finance, investment strategies, and career development.',
-    partnership: 'Partner 2 provides networking events, career guidance, and sponsors our annual financial planning competition.',
-    category: 'Financial Services'
-  },
-  {
-    id: 3,
-    name: 'Partner 3',
-    initials: 'P3',
-    description: 'Partner 3 provides academic support, faculty expertise, and access to world-class financial education resources.',
-    partnership: 'Partner 3 faculty members lead specialized workshops and provide academic guidance for our curriculum development.',
-    category: 'Education'
-  },
-  {
-    id: 4,
-    name: 'Partner 4',
-    initials: 'P4',
-    description: 'Partner 4 equips our members with professional-grade financial tools and market data to enhance their learning experience.',
-    partnership: 'Partner 4 provides access to their platform and hosts market analysis training sessions.',
-    category: 'Technology'
   }
 ]
 
@@ -83,7 +59,7 @@ export default function Partners() {
               Our Partners
             </h1>
             <p className="text-xl md:text-2xl mb-12 max-w-3xl fade-up delay-200">
-              We&apos;re proud to collaborate with industry leaders and educational institutions to provide exceptional financial education opportunities.
+              We&apos;re proud to collaborate with industry leaders to provide exceptional financial education opportunities.
             </p>
           </div>
         </div>
@@ -95,20 +71,20 @@ export default function Partners() {
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
               <div className="w-16 h-1 bg-qpf-gold mx-auto mb-4 fade-up"></div>
-              <h2 className="text-3xl md:text-4xl font-serif text-qpf-dark mb-6 fade-up delay-100">Strategic Partnerships</h2>
+              <h2 className="text-3xl md:text-4xl font-serif text-qpf-dark mb-6 fade-up delay-100">Our Strategic Partnership</h2>
               <div className="w-16 h-1 bg-qpf-gold mx-auto fade-up delay-200"></div>
             </div>
             <p className="text-body max-w-3xl mx-auto fade-up delay-300 leading-relaxed">
-              Our partners play a crucial role in delivering high-quality financial education and creating opportunities for our members.
+              Our partner plays a crucial role in delivering high-quality financial education and creating opportunities for our members.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex justify-center">
             {partners.map((partner, index) => (
               <div 
                 key={partner.id} 
                 id={`partner-${partner.id}`}
-                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] fade-up overflow-hidden"
+                className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] fade-up overflow-hidden max-w-2xl"
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Gradient background effect */}
