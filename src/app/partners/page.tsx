@@ -140,7 +140,7 @@ export default function Partners() {
             <div className="group text-center fade-up p-8 rounded-2xl hover:bg-gray-50 transition-all duration-500">
               <div className="text-qpf-gold mb-6 group-hover:scale-110 transition-all duration-500">
                 <svg className="w-16 h-16 mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
                 </svg>
               </div>
               <h3 className="text-xl font-serif mb-4 text-qpf-dark">Access to Talent</h3>
