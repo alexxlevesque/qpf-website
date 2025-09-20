@@ -33,7 +33,7 @@ export default function Home() {
         <div className="w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
             <div className="max-w-3xl">
-              <h1 className="heading-xl fade-up">Queen's Personal Finance.</h1>
+              <h1 className="heading-xl fade-up">Queen&apos;s Personal Finance.</h1>
               <p className="text-body mt-6 fade-up delay-200 max-w-2xl">
                 Clear, practical guidance for Queen&apos;s students. Learn the basics. Build confidence.
               </p>

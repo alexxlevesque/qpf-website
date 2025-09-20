@@ -97,7 +97,7 @@ export default function JoinUs() {
             <div className="text-center mb-16">
               <h2 className="heading-lg mb-6 fade-up">Join Our Community</h2>
               <p className="text-ink/80 text-lg max-w-3xl mx-auto fade-up delay-200">
-                See what it's like to be part of the QPF family.
+                See what it&apos;s like to be part of the QPF family.
               </p>
             </div>
             
