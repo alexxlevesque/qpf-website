@@ -1,32 +1,28 @@
 const Footer = () => {
   return (
-    <footer className="bg-qpf-dark text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          {/* Left side - Logo and description */}
-          <div className="mb-8 md:mb-0">
-            <h2 className="text-2xl font-serif text-qpf-gold mb-4">Queen&apos;s Personal Finance</h2>
-            <p className="text-white/60 max-w-md">
+    <footer className="bg-white text-ink border-t border-ink/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight">Queen&apos;s Personal Finance</h2>
+            <p className="text-ink/70 max-w-md mt-3">
               Canada&apos;s premier student-run financial education initiative serving students across Queen&apos;s University.
             </p>
           </div>
 
-          {/* Right side - Navigation and social links */}
-          <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-12">
-            {/* Navigation Links */}
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-12">
             <div className="flex flex-col space-y-2">
-              <a href="/about" className="text-white/60 hover:text-qpf-gold transition-colors duration-200">About</a>
-              <a href="/membership" className="text-white/60 hover:text-qpf-gold transition-colors duration-200">Membership</a>
-              <a href="/contact" className="text-white/60 hover:text-qpf-gold transition-colors duration-200">Contact Us</a>
+              <a href="/about" className="text-ink/70 hover:text-ink transition-colors">About</a>
+              <a href="/membership" className="text-ink/70 hover:text-ink transition-colors">Membership</a>
+              <a href="/contact" className="text-ink/70 hover:text-ink transition-colors">Contact</a>
             </div>
 
-            {/* Social Links */}
             <div className="flex space-x-6">
               <a
                 href="https://www.instagram.com/queens.personalfinance/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/60 hover:text-qpf-gold transition-colors duration-200"
+                className="text-ink/60 hover:text-ink transition-colors"
               >
                 <span className="sr-only">Instagram</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -35,7 +31,7 @@ const Footer = () => {
               </a>
               <a
                 href="mailto:e.madruga@queensu.ca"
-                className="text-white/60 hover:text-qpf-gold transition-colors duration-200"
+                className="text-ink/60 hover:text-ink transition-colors"
               >
                 <span className="sr-only">Email</span>
                 <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -46,9 +42,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        <div className="pt-8 mt-8 border-t border-ink/10 text-sm text-ink/60">
+          © {new Date().getFullYear()} Queen&apos;s Personal Finance
+        </div>
       </div>
     </footer>
   )
 }
 
-export default Footer 
+export default Footer

@@ -9,21 +9,30 @@
   }
 
   body {
-    @apply text-qpf-dark;
+    @apply text-ink bg-wash;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-serif font-semibold tracking-[-0.01em];
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply inline-flex items-center px-6 py-3 border-2 border-qpf-gold text-qpf-gold hover:bg-qpf-gold hover:text-white transition-colors duration-200 text-base font-medium;
+  /* Smooth transitions baseline */
+  .transition-base {
+    @apply transition-all duration-200 ease-out;
   }
 
-  .btn-white {
-    @apply inline-flex items-center px-6 py-3 border-2 border-white text-white hover:bg-white hover:text-qpf-gold transition-colors duration-200 text-base font-medium;
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl bg-brand-yellow text-ink font-medium hover:brightness-95 transition-colors duration-200 text-base shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl border border-ink/15 bg-white text-ink hover:bg-ink/5 transition-colors duration-200 text-base;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl text-ink hover:bg-ink/5 transition-colors duration-200 text-base;
   }
 
   .section-padding {
@@ -35,11 +44,11 @@
   }
 
   .heading-xl {
-    @apply text-4xl md:text-5xl lg:text-6xl font-serif font-bold;
+    @apply text-4xl md:text-6xl lg:text-7xl font-serif font-semibold leading-[1.05];
   }
 
   .heading-lg {
-    @apply text-3xl md:text-4xl font-serif font-bold;
+    @apply text-3xl md:text-5xl font-serif font-semibold leading-tight;
   }
 
   .heading-md {
@@ -47,7 +56,15 @@
   }
 
   .text-body {
-    @apply text-lg text-qpf-dark/80;
+    @apply text-lg text-ink/80;
+  }
+
+  /* Panels and cards */
+  .panel {
+    @apply bg-panel rounded-xl shadow-card border border-stroke/80;
+  }
+  .panel-inner {
+    @apply rounded-[10px] bg-white/30 backdrop-blur-sm;
   }
 
   /* Scroll Animations */
@@ -96,10 +113,7 @@
   }
 }
 
-/* Custom Gradients */
-.bg-gradient-gold {
-  background: linear-gradient(135deg, #B39B57 0%, #D4AF37 100%);
-}
+/* Minimal gradients removed for cleaner aesthetic */
 
 /* Animations */
 .fade-in {
@@ -123,5 +137,5 @@
 }
 
 .hover-card:hover {
-  @apply transform -translate-y-1 shadow-lg;
-} 
+  @apply transform -translate-y-1 shadow-md;
+}

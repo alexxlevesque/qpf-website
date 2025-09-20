@@ -32,36 +32,35 @@ export default function JoinUs() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen bg-white pt-16">
+      <main className="min-h-screen bg-transparent pt-16">
         {/* Fall Hiring */}
         <section className="relative py-24">
-          {/* Background Image */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 -z-10">
             <Image
               src="/images/joinus-bg.jpg"
-              alt="Join Us Background"
+              alt="Join Us background"
               fill
-              className="object-cover filter brightness-90 contrast-75 saturate-50 sepia hue-rotate-[340deg]"
+              className="object-cover blur-[2px]"
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-qpf-dark/90 to-qpf-gold/40 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-sand-100/70" />
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-serif text-white mb-6 fade-up">Join Our Team</h1>
-              <p className="text-xl text-white/90 max-w-3xl mx-auto fade-up delay-200">
+              <h1 className="text-4xl md:text-5xl font-serif text-ink mb-6 fade-up">Join Our Team</h1>
+              <p className="text-xl text-ink/80 max-w-3xl mx-auto fade-up delay-200">
                 Be part of a dynamic team dedicated to making financial education accessible to every Queen&apos;s student.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {roles.map((role, index) => (
-                <div key={role.title} className={`bg-white/95 backdrop-blur-sm rounded-lg p-8 shadow-lg fade-right delay-${index * 200}`}>
-                  <h3 className="text-2xl font-serif text-qpf-dark mb-4">{role.title}</h3>
-                  <p className="text-qpf-dark/80 mb-6">{role.description}</p>
+                <div key={role.title} className={`panel p-8 fade-right delay-${index * 200}`}>
+                  <h3 className="text-2xl font-serif text-ink mb-4">{role.title}</h3>
+                  <p className="text-ink/80 mb-6">{role.description}</p>
                   <div>
-                    <h4 className="text-lg font-medium text-qpf-dark mb-2">Key Responsibilities:</h4>
-                    <ul className="list-disc list-inside text-qpf-dark/80 space-y-2">
+                    <h4 className="text-lg font-medium text-ink mb-2">Key Responsibilities:</h4>
+                    <ul className="list-disc list-inside text-ink/80 space-y-2">
                       {role.responsibilities.map((resp, index) => (
                         <li key={index}>{resp}</li>
                       ))}
@@ -72,7 +71,7 @@ export default function JoinUs() {
             </div>
 
             <div className="mt-12 text-center fade-up delay-600">
-              <div className="inline-flex items-center px-8 py-4 bg-gray-300 text-gray-600 rounded-md text-lg font-medium cursor-not-allowed">
+              <div className="inline-flex items-center px-8 py-4 bg-ink/10 text-ink/60 rounded-xl text-lg font-medium cursor-not-allowed">
                 Applications coming soon
                 <svg
                   className="ml-2 w-5 h-5"

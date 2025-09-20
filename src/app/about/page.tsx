@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import Button from '@/components/ui/Button'
 
 export default function About() {
   const [openPillar, setOpenPillar] = useState<number | null>(null)
@@ -69,25 +70,25 @@ export default function About() {
       
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 -z-10">
           <Image
             src="/images/ourstory-bg.jpg"
             alt="About Background"
             fill
-            className="object-cover filter brightness-90 contrast-30 saturate-50 sepia hue-rotate-[340deg]"
+            className="object-cover blur-[2px]"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-qpf-dark/80 to-qpf-gold/40 mix-blend-multiply" />
+          <div className="absolute inset-0 bg-sand-100/70" />
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-white">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-ink">
           <div className="max-w-4xl">
-            <h2 className="text-2xl font-medium mb-6 fade-up">ABOUT US</h2>
-            <h1 className="text-5xl md:text-6xl font-serif font-normal mb-8 fade-up delay-200">
+            <h2 className="text-sm uppercase tracking-wide text-ink/70 mb-4 fade-up">About us</h2>
+            <h1 className="text-5xl md:text-6xl font-serif mb-6 fade-up delay-200">
               Our Story
             </h1>
-            <p className="text-xl md:text-2xl mb-12 max-w-3xl fade-up delay-400">
-              Learn about our mission, values, and the team behind Queen&apos;s Personal Finance.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl fade-up delay-400">
+              Learn about our mission, values, and the people behind Queen&apos;s Personal Finance.
             </p>
           </div>
         </div>
@@ -106,7 +107,7 @@ export default function About() {
       </section>
 
       {/* Three Pillars Section */}
-      <section className="relative py-24 bg-gray-50">
+      <section className="relative py-24 bg-sand-100/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16 fade-up">
             <h2 className="heading-lg mb-8">Our Three Pillars</h2>
@@ -117,22 +118,22 @@ export default function About() {
 
           <div className="max-w-3xl mx-auto space-y-4">
             {pillars.map((pillar, index) => (
-              <div key={index} className="bg-white rounded-lg border border-qpf-gold/20 overflow-hidden fade-up" style={{ animationDelay: `${index * 200}ms` }}>
+              <div key={index} className="panel overflow-hidden fade-up" style={{ animationDelay: `${index * 200}ms` }}>
                 <button
                   onClick={() => setOpenPillar(openPillar === index ? null : index)}
-                  className="w-full p-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                  className="w-full p-6 flex items-center justify-between hover:bg-ink/5 transition-colors duration-200"
                 >
                   <div className="flex items-center space-x-4">
-                    <div className="text-qpf-gold">
+                    <div className="text-brand-yellow">
                       {pillar.icon}
                     </div>
                     <div className="text-left">
-                      <h3 className="text-xl font-serif text-qpf-dark mb-1">{pillar.title}</h3>
-                      <p className="text-qpf-dark/80">{pillar.description}</p>
+                      <h3 className="text-xl font-serif text-ink mb-1">{pillar.title}</h3>
+                      <p className="text-ink/80">{pillar.description}</p>
                     </div>
                   </div>
                   <svg
-                    className={`w-6 h-6 text-qpf-gold transform transition-transform duration-200 ${
+                    className={`w-6 h-6 text-brand-yellow transform transition-transform duration-200 ${
                       openPillar === index ? 'rotate-180' : ''
                     }`}
                     fill="none"
@@ -144,10 +145,10 @@ export default function About() {
                 </button>
                 {openPillar === index && (
                   <div className="px-6 pb-6 pt-2">
-                    <ul className="space-y-3 text-qpf-dark/80">
+                    <ul className="space-y-3 text-ink/80">
                       {pillar.details.map((detail, detailIndex) => (
                         <li key={detailIndex} className="flex items-start">
-                          <svg className="w-5 h-5 text-qpf-gold mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <svg className="w-5 h-5 text-brand-yellow mt-1 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                           </svg>
                           <span>{detail}</span>
@@ -170,9 +171,9 @@ export default function About() {
             <p className="text-body mb-8">
               Our dedicated team of students works tirelessly to bring financial education to Queen&apos;s University.
             </p>
-            <Link href="/team" className="btn-primary fade-up delay-200">
-              View Full Team
-            </Link>
+            <div className="fade-up delay-200">
+              <Button href="/team" variant="primary">View full team</Button>
+            </div>
           </div>
         </div>
       </section>
