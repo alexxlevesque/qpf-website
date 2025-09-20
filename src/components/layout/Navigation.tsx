@@ -14,7 +14,6 @@ const Navigation = () => {
     { name: 'Team', href: '/team' },
     { name: 'Partners', href: '/partners' },
     { name: 'Membership', href: '/membership' },
-    { name: 'Join Us', href: '/join' },
     { name: 'Contact', href: '/contact' },
   ]
 

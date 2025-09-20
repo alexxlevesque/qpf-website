@@ -91,6 +91,32 @@ export default function JoinUs() {
           </div>
         </section>
 
+        {/* Candid Photos Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="heading-lg mb-6 fade-up">Join Our Community</h2>
+              <p className="text-ink/80 text-lg max-w-3xl mx-auto fade-up delay-200">
+                See what it's like to be part of the QPF family.
+              </p>
+            </div>
+            
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {[1, 2, 3, 4, 5, 6].map((i) => (
+                    <div key={i} className="aspect-[4/3] rounded-xl overflow-hidden fade-up" style={{ animationDelay: `${i * 100}ms` }}>
+                      <Image
+                        src={i <= 1 ? "/images/candid/workshop.jpeg" : i <= 3 ? "/images/candid/team.jpeg" : "/images/candid/advisory.jpg"}
+                        alt={`Community photo ${i}`}
+                        width={400}
+                        height={300}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+          </div>
+        </section>
+
         {/* Resources */}
         <section className="py-20 bg-sand-100/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

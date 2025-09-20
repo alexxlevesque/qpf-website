@@ -60,13 +60,26 @@ export default function Membership() {
         {/* Inclusiveness */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-serif text-ink mb-8">
-                Our Commitment to Inclusivity
-              </h2>
-              <p className="text-lg text-ink/80 mb-8">
-                QPF is open to all students across all years, regardless of faculty.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="fade-right">
+                <h2 className="text-3xl font-serif text-ink mb-8">
+                  Our Commitment to Inclusivity
+                </h2>
+                <p className="text-lg text-ink/80 mb-8">
+                  QPF is open to all students across all years, regardless of faculty.
+                </p>
+              </div>
+              <div className="fade-left">
+                <div className="aspect-[4/3] rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/candid/workshop.jpeg"
+                      alt="Workshop photo"
+                    width={600}
+                    height={450}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -33,7 +33,7 @@ export default function Home() {
         <div className="w-full">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
             <div className="max-w-3xl">
-              <h1 className="heading-xl fade-up">Money made simple.</h1>
+              <h1 className="heading-xl fade-up">Queen's Personal Finance.</h1>
               <p className="text-body mt-6 fade-up delay-200 max-w-2xl">
                 Clear, practical guidance for Queen&apos;s students. Learn the basics. Build confidence.
               </p>
@@ -49,15 +49,28 @@ export default function Home() {
             {/* Mission Section - Clean design without background */}
       <section className="relative bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="max-w-2xl fade-right">
-            <h2 className="heading-lg mb-8">Our Vision</h2>
-            <p className="text-body mb-8">
-              To provide practical and essential financial education to every Queen&apos;s student.
-            </p>
-            <div className="mt-8">
-              <Link href="/membership" className="btn-primary">
-                Start Learning Now
-              </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="fade-right">
+              <h2 className="heading-lg mb-8">Our Vision</h2>
+              <p className="text-body mb-8">
+                To provide practical and essential financial education to every Queen&apos;s student.
+              </p>
+              <div className="mt-8">
+                <Button href="/membership" variant="primary">
+                  Start Learning Now
+                </Button>
+              </div>
+            </div>
+            <div className="fade-left">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden">
+                <Image
+                  src="/images/candid/team.jpeg"
+                  alt="Team candid photo"
+                  width={600}
+                  height={450}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

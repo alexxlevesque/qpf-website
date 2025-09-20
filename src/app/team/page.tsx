@@ -86,7 +86,7 @@ export default function Team() {
         <section className="relative py-24">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/team-bg.jpg"
+              src="/images/candid/team.jpeg"
               alt="Team background"
               fill
               className="object-cover blur-[2px]"
