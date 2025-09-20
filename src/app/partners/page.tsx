@@ -43,14 +43,14 @@ export default function Partners() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center">
         <div className="absolute inset-0 -z-10">
-          <Image
-            src="/images/stats-bg.jpg"
-            alt="Partners Background"
+            <Image
+              src="/images/credit card and laptop.jpg"
+              alt="Partners Background"
             fill
             className="object-cover blur-[2px]"
             priority
           />
-          <div className="absolute inset-0 bg-sand-100/70" />
+          <div className="absolute inset-0 bg-brand-yellow/10 bg-sand-100/40" />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-ink">

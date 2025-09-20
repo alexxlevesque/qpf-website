@@ -27,7 +27,7 @@ export default function Home() {
             className="object-cover blur-[2px]"
             priority
           />
-          <div className="absolute inset-0 bg-sand-100/70" />
+          <div className="absolute inset-0 bg-brand-yellow/10 bg-sand-100/40" />
         </div>
 
         <div className="w-full">

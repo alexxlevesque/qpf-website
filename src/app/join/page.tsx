@@ -37,12 +37,12 @@ export default function JoinUs() {
         <section className="relative py-24">
           <div className="absolute inset-0 -z-10">
             <Image
-              src="/images/joinus-bg.jpg"
+              src={"/images/tax return \"need help?\".jpg"}
               alt="Join Us background"
               fill
               className="object-cover blur-[2px]"
             />
-            <div className="absolute inset-0 bg-sand-100/70" />
+            <div className="absolute inset-0 bg-brand-yellow/10 bg-sand-100/40" />
           </div>
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,15 +92,15 @@ export default function JoinUs() {
         </section>
 
         {/* Resources */}
-        <section className="py-20 bg-qpf-gold/5">
+        <section className="py-20 bg-sand-100/60">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-serif text-qpf-dark text-center mb-16">
+            <h2 className="text-3xl font-serif text-ink text-center mb-16">
               Resources
             </h2>
             <div className="max-w-3xl mx-auto">
-              <div className="bg-white rounded-lg shadow-sm p-8 text-center">
+              <div className="panel p-8 text-center">
                 <svg
-                  className="w-16 h-16 mx-auto mb-6 text-qpf-gold"
+                  className="w-16 h-16 mx-auto mb-6 text-brand-yellow"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -112,8 +112,8 @@ export default function JoinUs() {
                     d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
                   />
                 </svg>
-                <h3 className="text-xl font-serif text-qpf-dark mb-4">Educational Materials</h3>
-                <p className="text-qpf-dark/80 mb-8">
+                <h3 className="text-xl font-serif text-ink mb-4">Educational Materials</h3>
+                <p className="text-ink/80 mb-8">
                   Our collection of financial education resources and toolkits will be available soon.
                 </p>
               </div>
