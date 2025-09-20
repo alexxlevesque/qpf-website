@@ -38,7 +38,7 @@ const sizeClasses: Record<ButtonSize, string> = {
 }
 
 export default function Button(props: ButtonProps) {
-  const { variant = 'primary', size = 'md', className = '', children, ...rest } = props as any
+  const { variant = 'primary', size = 'md', className = '', children, ...rest } = props
   const base = `${variantClasses[variant]} ${sizeClasses[size]} ${className}`.trim()
 
   if ('href' in props && props.href) {

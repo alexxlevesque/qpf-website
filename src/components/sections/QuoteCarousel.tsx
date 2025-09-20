@@ -41,19 +41,19 @@ const QuoteCarousel = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           <div className="text-center">
-            <p className="text-2xl md:text-3xl font-serif text-white mb-8 italic">
+            <p className="text-2xl md:text-3xl font-serif text-ink mb-8 italic">
               &ldquo;{quotes[currentQuote].text}&rdquo;
             </p>
-            <div className="text-white">
+            <div className="text-ink">
               <p className="text-lg font-medium">{quotes[currentQuote].author}</p>
-              <p className="text-white/60">{quotes[currentQuote].title}</p>
+              <p className="text-ink/70">{quotes[currentQuote].title}</p>
             </div>
           </div>
 
           <div className="absolute top-1/2 -translate-y-1/2 left-0 flex justify-between w-full">
             <button
               onClick={prevQuote}
-              className="bg-white/20 backdrop-blur-sm text-white hover:text-qpf-gold hover:bg-white/30 p-2 rounded-full shadow-md transition-all duration-200"
+              className="bg-ink/10 backdrop-blur-sm text-ink hover:text-brand-yellow hover:bg-ink/20 p-2 rounded-full shadow-md transition-all duration-200"
               aria-label="Previous quote"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ const QuoteCarousel = () => {
             </button>
             <button
               onClick={nextQuote}
-              className="bg-white/20 backdrop-blur-sm text-white hover:text-qpf-gold hover:bg-white/30 p-2 rounded-full shadow-md transition-all duration-200"
+              className="bg-ink/10 backdrop-blur-sm text-ink hover:text-brand-yellow hover:bg-ink/20 p-2 rounded-full shadow-md transition-all duration-200"
               aria-label="Next quote"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ const QuoteCarousel = () => {
                 key={index}
                 onClick={() => setCurrentQuote(index)}
                 className={`w-2 h-2 rounded-full transition-colors duration-200 ${
-                  currentQuote === index ? 'bg-white' : 'bg-white/30'
+                  currentQuote === index ? 'bg-ink' : 'bg-ink/30'
                 }`}
                 aria-label={`Go to quote ${index + 1}`}
               />
